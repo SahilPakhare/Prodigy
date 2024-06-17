@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Web App</title>
+    <style>
+        body {
+            background-image: url('img/bg1.jpg');  /* Ensure the image path is correct */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1, h2, p {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+   
+    </form>
+    <h2>Current weather for {{ data.city }}</h2>
+    <p>Country: <b>{{ data.country }}</b></p>
+    <p>Temperature: <b>{{ data.temperature }}</b> °C</p>
+    <p>Pressure: <b>{{ data.pressure }}</b> hPa</p>
+    <p>Humidity: <b>{{ data.humidity }}</b> %</p>
+    <p>Latitude: <b>{{ data.latitude }}</b></p>
+    <p>Longitude: <b>{{ data.longitude }}</b></p>
+    <p>Sunrise: <b>{{ data.sunrise }}</b></p>
+    <p>Sunset: <b>{{ data.sunset }}</b></p>
+    <p>Weather Description: <b>{{ data.weather_description }}</b></p>
+    <p>Wind Speed: <b>{{ data.wind_speed }}</b> m/s</p>
+    <p>Visibility: <b>{{ data.visibility }}</b> meters</p>
+</body>
+</html>

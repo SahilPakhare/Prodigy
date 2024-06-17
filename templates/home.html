@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to</h1>
+            <p>SkyCast <img src="static\img\sky1.png" ></p>
+    </div>
+
+    
+    <form method="POST" action="/getCity">
+        <input style="font-family: cursive;" type="text" name="city" placeholder="Enter city name">
+        <input style="font-family: cursive;" type="submit" value="Check Weather">
+    </form>
+    <div> {% if data %}
+        {% if data.error %}
+        <h2>{{ data.error }}</h2>
+        {% else %}
+        <h3> Here is the Current weather details about <p1>{{ data.city }}</p1></h3>
+        <!-- <img src="{{ data.flag }}" alt="Flag of {{ data.country }}" style="width:50px; height:auto;"> -->
+
+        <p2>Country: <b>{{ data.country }}</b></p2>
+        <p3>Temperature: <b>{{ data.temperature }}</b> °C</p3>
+        <p4>Pressure: <b>{{ data.pressure }}</b> hPa</p4>
+        <p5>Humidity: <b>{{ data.humidity }}</b> %</p5>
+        <p6>Latitude: <b>{{ data.latitude }}</b></p6><br>
+        <p7>Longitude: <b>{{ data.longitude }}</b></p7>
+        <p8>Sunrise: <b>{{ data.sunrise }}</b></p8>
+        <p9>Sunset: <b>{{ data.sunset }}</b></p9>
+        <p10>Weather Description: <b>{{ data.weather_description }}</b></p10>
+        <p11>Wind Speed: <b>{{ data.wind_speed }}</b> m/s</p11>
+        <p12>Visibility: <b>{{ data.visibility }}</b> meters</p12>
+        {% endif %}
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
+
+
